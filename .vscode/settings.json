@@ -1,0 +1,20 @@
+{
+    "launch": {
+
+        "[sql]": {
+            "editor.suggest.showWords": false,
+            "editor.suggest.showSnippets": false,
+            "editor.quickSuggestions": {
+                "other": false,
+                "comments": false,
+                "strings": false
+            }
+        },
+        "configurations": [],
+        "compounds": []
+    },
+    "json.schemas": [
+
+
+    ]
+}
