@@ -16,6 +16,9 @@ SELECT
         WHEN QtdePontos < 0 THEN QtdePontos
     END)  AS QtdePontosNegativos,
 
+
+-- Se utilizar um ELSE 0 ele acaba contando os que tem 0 é isso pode gerar um dado errado
+-- O COUNT não conta dados nullos
     count(CASE
             WHEN QtdePontos < 0 THEN QtdePontos
         END) AS QtdeTransacoesNegativas
