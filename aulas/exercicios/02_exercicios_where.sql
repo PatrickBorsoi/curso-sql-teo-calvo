@@ -40,14 +40,19 @@
 
 -- 8 - Lista de transações com o produto “Resgatar Ponei”;
 
--- 9 - Listar todas as transações adicionando uma coluna nova sinalizando “alto”, “médio” e “baixo” para o valor dos pontos [<10 ; <500; >=500]
+-- 9 - Listar todas as transações adicionando uma coluna nova sinalizando 
+-- “alto”, “médio” e “baixo” para o valor dos pontos [<10 ; <500; >=500]
 
--- SELECT  IdCliente, 
+-- SELECT  IdCliente,
 --         QtdePontos,
---         QtdePontos >= 500 AS alto,
---         QtdePontos > 10 AND QtdePontos < 500 AS medio,
---         QtdePontos < 10 AS baixo
+--         CASE 
+--             WHEN QtdePontos < 10 THEN 'Baixo'
+--             WHEN QtdePontos < 500 THEN 'Média'
+--             ELSE 'Alto'
+--         END AS Sinalizacao
 
 -- FROM transacoes
+
+-- ORDER BY QtdePontos DESC
 
 
